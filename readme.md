@@ -27,6 +27,8 @@ function useCounter(initState = 0) {
   return { counter, increment };
 }
 
+const Counter = setCtx("counter", useCounter);
+
 const CounterDisplay = () => {
   const { counter, increment } = getCtx("counter");
   return (
