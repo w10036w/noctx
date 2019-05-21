@@ -1,0 +1,16 @@
+{
+  "env": {
+    "development": {
+      "presets": ["react-app"],
+      "plugins": [
+        "add-module-exports"
+      ]
+    },
+    "production": {
+      "presets": ["react-app", "minify"],
+      "plugins": [
+        "add-module-exports"
+      ]
+    }
+  }
+}
