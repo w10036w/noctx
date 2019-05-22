@@ -1,56 +1,65 @@
 {
- "name": "noctx",
- "version": "0.1.0",
- "description": "tiny React context/state manager",
- "source": "src/noctx.js",
- "main": "dist/index.js",
- "module": "dist/index.mjs",
- "unpkg": "dist/index.umd.js",
- "amdName": "noctx",
- "sideEffects": false,
- "scripts": {
-  "example": "parcel examples/index.html --out-dir examples/dist",
-  "build": "npm run microbundle",
-  "babelminify": "BABEL_ENV=production babel src --out-dir dist",
-  "microbundle": "rm -rf dist && microbundle --external react --globals react=React --jsx React.createElement --strict --no-compress",
-  "test": "ava test",
-  "prepublish": "npm run test && npm run build"
- },
- "keywords": [
-  "react"
- ],
- "author": "w10036w",
- "license": "MIT",
- "devDependencies": {
-  "@babel/cli": "^7.4.4",
-  "@babel/polyfill": "^7.4.4",
-  "ava": "^1.4.1",
-  "babel-eslint": "^10.0.1",
-  "babel-plugin-add-module-exports": "^1.0.2",
-  "babel-preset-minify": "^0.5.0",
-  "babel-preset-react-app": "^9.0.0",
-  "eslint": "^5.16.0",
-  "eslint-config-airbnb": "^17.1.0",
-  "eslint-plugin-import": "^2.17.2",
-  "eslint-plugin-jsx-a11y": "^6.2.1",
-  "eslint-plugin-react": "^7.13.0",
-  "husky": "^2.3.0",
-  "lint-staged": "^8.1.7",
-  "microbundle": "^0.11.0",
-  "parcel": "^1.12.3",
-  "prettier": "^1.17.1",
-  "react": "^16.8.6",
-  "react-dom": "^16.8.6"
- },
- "husky": {
-  "hooks": {
-   "pre-commit": "lint-staged"
+  "name": "noctx",
+  "version": "0.1.1",
+  "description": "tiny React context/state manager",
+  "source": "src/noctx.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "unpkg": "dist/index.umd.js",
+  "amdName": "noctx",
+  "sideEffects": false,
+  "scripts": {
+    "example": "parcel examples/index.html --out-dir examples/dist",
+    "build": "npm run microbundle",
+    "babelminify": "BABEL_ENV=production babel src --out-dir dist",
+    "microbundle": "rm -rf dist && microbundle --external react --globals react=React --jsx React.createElement --strict --no-compress",
+    "test": "ava test",
+    "prepublish": "npm run test && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w10036w/noctx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/w10036w/noctx/issues"
+  },
+  "homepage": "https://github.com/w10036w/noctx#readme",
+  "keywords": [
+    "react",
+    "noctx"
+  ],
+  "author": "w10036w",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
+    "ava": "^1.4.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-minify": "^0.5.0",
+    "babel-preset-react-app": "^9.0.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "microbundle": "^0.11.0",
+    "parcel": "^1.12.3",
+    "prettier": "^1.17.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write",
+      "git add"
+    ]
   }
- },
- "lint-staged": {
-  "*": [
-   "prettier --write",
-   "git add"
-  ]
- }
 }

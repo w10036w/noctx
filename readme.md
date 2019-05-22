@@ -1,6 +1,6 @@
 # `noctx`
 
-> tiny react@^16.8.0 context/state manager
+> tiny react context/state manager with hooks
 
 ## Install
 
@@ -8,12 +8,15 @@
 npm install --save noctx
 ```
 
-## Pros
+## Highlights
 
 - concise api: `getCtx()`, `setCtx()`, `useCtx()`, `initValue`, check full examples.
 - think in hooks
 
 ## Example
+
+> [sandbox](https://codesandbox.io/s/noctx-488oo5031x)
+> [github](https://github.com/w10036w/noctx)
 
 ### Basic (setCtx, getCtx)
 
